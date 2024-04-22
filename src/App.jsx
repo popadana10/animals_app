@@ -3,27 +3,29 @@ import './App.css'
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Card from './components/Card';
-import {animals, birds} from './animalsList';
+import {animals} from './animalsList';
 
 function App() {
+  const [animalsData, setAnimalsData]=useState(animals)
 
   const removeCard = (animal) => {
-    console.log(animal, 'removeCard was triggered');
+  const updatedArray = animalsData.filter(item=>item.name !== animal);
+  setAnimalsData(updatedArray);
   }
 
   const addLikes = (animal) => {
-    console.log(animal, 'addLikes was triggered');
+    console.log(animal);
   }
 
   const removeLikes = (animal) => {
-    console.log(animal, 'removeLikes was triggered');
+    console.log(animal);
   }
 
   return (
     <>
     <Header/>
       <main>
-        {animals.map((animal) => (
+        {animalsData.map((animal) => (
         <Card 
         key={animal.name} 
         {...animal} 
