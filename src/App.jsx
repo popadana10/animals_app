@@ -3,32 +3,41 @@ import './App.css'
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Card from './components/Card';
-import {animals, birds} from './animalsList';
+import {animals} from './animalsList';
 
 function App() {
-
+  const [animalsData, setAnimalsData]=useState(animals);
+  
   const removeCard = (animal) => {
-    console.log(animal, 'removeCard was triggered');
-  }
+  const updatedArray = animalsData.filter(item=>item.name !== animal);
+  setAnimalsData(updatedArray);
+  };
 
-  const addLikes = (animal) => {
-    console.log(animal, 'addLikes was triggered');
-  }
-
-  const removeLikes = (animal) => {
-    console.log(animal, 'removeLikes was triggered');
-  }
+  const likesHandler = (animal, action) => {
+    const updatedArray =animalsData.map(item =>{
+      if (item.name === animal) {
+        if (action === 'add') {
+          return {...item, likes: item.likes +1};
+        } else {
+          return {...item, likes: item.likes -1};
+        }
+      } else {
+        return item;
+      }
+    });
+    setAnimalsData(updatedArray);
+  };
 
   return (
     <>
     <Header/>
-      <main>
-        {animals.map((animal) => (
+      <main className='card'>
+        {animalsData.map((animal) => (
         <Card 
         key={animal.name} 
         {...animal} 
-        removeLikes={()=>removeLikes(animal.name)} 
-        addLikes = {addLikes.bind(this, animal.name)} 
+        removeLikes={()=>likesHandler(animal.name, 'remove')} 
+        addLikes = {likesHandler.bind(this, animal.name, 'add')} 
         removeCard={()=>removeCard(animal.name)}
         />
         ))};
