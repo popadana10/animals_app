@@ -6,31 +6,38 @@ import Card from './components/Card';
 import {animals} from './animalsList';
 
 function App() {
-  const [animalsData, setAnimalsData]=useState(animals)
-
+  const [animalsData, setAnimalsData]=useState(animals);
+  
   const removeCard = (animal) => {
   const updatedArray = animalsData.filter(item=>item.name !== animal);
   setAnimalsData(updatedArray);
-  }
+  };
 
-  const addLikes = (animal) => {
-    console.log(animal);
-  }
-
-  const removeLikes = (animal) => {
-    console.log(animal);
-  }
+  const likesHandler = (animal, action) => {
+    const updatedArray =animalsData.map(item =>{
+      if (item.name === animal) {
+        if (action === 'add') {
+          return {...item, likes: item.likes +1};
+        } else {
+          return {...item, likes: item.likes -1};
+        }
+      } else {
+        return item;
+      }
+    });
+    setAnimalsData(updatedArray);
+  };
 
   return (
     <>
     <Header/>
-      <main>
+      <main className='card'>
         {animalsData.map((animal) => (
         <Card 
         key={animal.name} 
         {...animal} 
-        removeLikes={()=>removeLikes(animal.name)} 
-        addLikes = {addLikes.bind(this, animal.name)} 
+        removeLikes={()=>likesHandler(animal.name, 'remove')} 
+        addLikes = {likesHandler.bind(this, animal.name, 'add')} 
         removeCard={()=>removeCard(animal.name)}
         />
         ))};

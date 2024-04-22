@@ -5,19 +5,3 @@
   border-radius: 12px;
   color: rgb(40, 40, 40);
 }
-button {
-    background-color: rgb(255, 255, 255);
-    border-radius: 100px;
-    color: rgb(88, 88, 88);
-    padding: px; 
-    font-size: 16px; 
-    cursor: pointer;
-  }
-
-  .buttton:hover {
-    background-color: RoyalBlue;
-  }
-
-  image {
-    
-  }

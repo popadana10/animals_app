@@ -6,7 +6,7 @@ const Card = ({name, likes, addLikes, removeCard, removeLikes}) => {
             <h2>{name}</h2>
             <img src={`https://source.unsplash.com/400x400/?${name}`}/>
 
-            <button onClick={(addLikes) => clickHandler(id)}> 
+            <button onClick={addLikes}> 
             <span className="material-symbols-outlined">heart_plus</span>
             </button>
 
