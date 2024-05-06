@@ -10,6 +10,7 @@ import Root from './routes/Root';
 import ErrorPage from './routes/ErrorPage';
 import About from './routes/About';
 import CategoryPage from './routes/CategoryPage';
+import SinglePage from './routes/SinglePage';
 
 
 function App() {
@@ -53,6 +54,7 @@ const router = createBrowserRouter([
     />
     ),
   },
+    {path:':category/:name', element:<SinglePage {...zoo}/>},
     {path:'/about', element:<About/>},
   ],
 },
