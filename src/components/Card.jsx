@@ -1,4 +1,4 @@
-import  './Card.css';
+
 
 const Card = ({name, likes, addLikes, removeCard, removeLikes}) => {
     return (
