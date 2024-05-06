@@ -3,11 +3,21 @@ import './App.css'
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Card from './components/Card';
-import {animals} from './animalsList';
+import {animals, birds, insects} from './routes/animalsList';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import Home from './routes/Home';
+import Root from './routes/Root';
+import Birds from './routes/Birds';
+import Animals from './routes/Animals';
+import ErrorPage from './routes/ErrorPage';
+import About from './routes/About';
+import CategoryPage from './routes/CategoryPage';
+
 
 function App() {
-  const [animalsData, setAnimalsData]=useState(animals);
-  
+  const [zoo, setZoo]=useState({animals, birds, insects});
+
+  /*
   const removeCard = (animal) => {
   const updatedArray = animalsData.filter(item=>item.name !== animal);
   setAnimalsData(updatedArray);
@@ -27,24 +37,22 @@ function App() {
     });
     setAnimalsData(updatedArray);
   };
+  */
 
-  return (
-    <>
-    <Header/>
-      <main className='card'>
-        {animalsData.map((animal) => (
-        <Card 
-        key={animal.name} 
-        {...animal} 
-        removeLikes={()=>likesHandler(animal.name, 'remove')} 
-        addLikes = {likesHandler.bind(this, animal.name, 'add')} 
-        removeCard={()=>removeCard(animal.name)}
-        />
-        ))};
-      </main>
-    <Footer/>
-    </>
-  );
+const router = createBrowserRouter([
+  {path:'/', element:<Home/>},
+  {
+    path:'/', 
+    element:<Root/>,
+    errorElement: <ErrorPage/>,
+    children:[
+    {path:':category', element: <CategoryPage {...zoo}/>},
+    {path:'/about', element:<About/>},
+  ],
+},
+
+]);
+  return <RouterProvider router={router}/>;
 }
 
 export default App;
