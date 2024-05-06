@@ -17,7 +17,7 @@ import CategoryPage from './routes/CategoryPage';
 function App() {
   const [zoo, setZoo]=useState({animals, birds, insects});
 
-  /*
+/*  
   const removeCard = (animal) => {
   const updatedArray = animalsData.filter(item=>item.name !== animal);
   setAnimalsData(updatedArray);
@@ -50,7 +50,6 @@ const router = createBrowserRouter([
     {path:'/about', element:<About/>},
   ],
 },
-
 ]);
   return <RouterProvider router={router}/>;
 }
