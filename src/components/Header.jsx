@@ -11,6 +11,8 @@ const Header = () => {
               <NavLink to='/'>Home</NavLink>
               <NavLink to='/animals'>Animals</NavLink>
               <NavLink to='/birds'>Birds</NavLink>
+              <NavLink to='/insects'>Insects</NavLink>
+              <NavLink to='/fishes'>Fishes</NavLink>
               <NavLink to='/about'>About</NavLink>
             </li>
           </ul>

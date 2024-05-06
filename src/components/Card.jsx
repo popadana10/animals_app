@@ -1,4 +1,4 @@
-import  './Card.css';
+import { Link } from "react-router-dom";
 
 const Card = ({name, likes, addLikes, removeCard, removeLikes}) => {
     return (
@@ -19,6 +19,7 @@ const Card = ({name, likes, addLikes, removeCard, removeLikes}) => {
             <button onClick={removeCard}>
             <span className="material-symbols-outlined">cancel</span>
             </button>
+            <Link to={name}>See More</Link>
         </div>
     );
 };
