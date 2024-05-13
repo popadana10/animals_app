@@ -19,6 +19,10 @@ body {
   min-height: 100vh;
 }
 
+.seeMore {
+  color: #333;
+}
+
 a {
   font-weight: 500;
   color: white;
@@ -85,8 +89,12 @@ h1 {
   line-height: 1.1;
 }
 
+.card a {
+  color: #333;
+}
+
 .card {
-  background-color: white;
+  background-color: rgb(250, 250, 250);
   border: 1px solid #bacdd8;
   padding: 8px;
   border-radius: 12px;
@@ -95,3 +103,4 @@ h1 {
   grid-template-columns: repeat(1, 1fr);
   gap: 1rem;
 }
+

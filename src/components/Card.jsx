@@ -19,7 +19,7 @@ const Card = ({name, likes, addLikes, removeCard, removeLikes}) => {
             <button onClick={removeCard}>
             <span className="material-symbols-outlined">cancel</span>
             </button>
-            <Link to={name}>See More</Link>
+           <Link to={name}>See More</Link>
         </div>
     );
 };

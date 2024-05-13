@@ -1,8 +1,5 @@
 import { useState } from 'react'
 import './App.css'
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Card from './components/Card';
 import {animals, birds, insects, fishes} from './routes/animalsList';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Home from './routes/Home';
@@ -12,11 +9,9 @@ import About from './routes/About';
 import CategoryPage from './routes/CategoryPage';
 import SinglePage from './routes/SinglePage';
 
-
 function App() {
-  
-  const [zoo, setZoo]=useState({animals, birds, insects, fishes});
 
+  const [zoo, setZoo]=useState({animals, birds, insects, fishes});
 
   const removeHandler = (name, category) => {
     setZoo((prevZoo)=>({
@@ -35,7 +30,6 @@ function App() {
     ),
   }));
   };
-
 
 const router = createBrowserRouter([
   {path:'/', element:<Home/>},
@@ -59,6 +53,7 @@ const router = createBrowserRouter([
   ],
 },
 ]);
+
   return <RouterProvider router={router}/>;
 };
 

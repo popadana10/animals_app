@@ -4,7 +4,6 @@ const Header = () => {
     return (
       <header className="header">
         <Link><h1>Zoo app</h1></Link>
-        <span className="material-symbols-outlined">search</span>
         <nav>
           <ul>
             <li>
