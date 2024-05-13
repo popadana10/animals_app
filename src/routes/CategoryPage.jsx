@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import Card from "../components/Card";
 
 const CategoryPage = ({removeCard, removeLikes, addLikes, ...rest}) => {
+    
     const {category} = useParams();
 
     const categoryItems = rest[category];
