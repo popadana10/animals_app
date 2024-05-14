@@ -1,9 +1,27 @@
-# React + Vite
+# Project title
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the Zoo App. This project sums up basics of the React course from Business College Helsinki.
+The project is about
 
-Currently, two official plugins are available:
+## Technologies used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# animals_app
+Built with:
+
+- Reactjs
+
+## Setup and usage
+
+Live page [here](https://github.com/margittennosaar/markdown_study_materials)
+
+## Screenshot
+
+## Sources
+
+- [Margit Tennosaar - markdown_study_materials](https://github.com/margittennosaar/markdown_study_materials.git)
+
+## Authors and acknowledgment
+
+Dana Popa
+
+- GitHub @popadana10
+- [LinkedIn](https://www.linkedin.com/in/dana-mihaela-popa/)
