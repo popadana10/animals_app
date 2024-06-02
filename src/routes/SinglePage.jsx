@@ -51,7 +51,6 @@ const SinglePage = ({ ...rest }) => {
 
     return (
         <div id="SinglePage">
-            <h2>Info about {data.name} will be here.</h2>
             <div className="imgcontainer">
                 <img
                     src={`https://source.unsplash.com/random/400×400/?${data.name}`}
