@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 
-const SinglePage = ({...rest}) => {
+const SinglePage = ({ ...rest }) => {
 
     const params = useParams();
 
@@ -10,7 +10,7 @@ const SinglePage = ({...rest}) => {
 
     return (
         <>
-        <h2>Info about {data.name} will be here.</h2>
+            <h2>Info about {data.name} will be here.</h2>
 
         </>
     );
