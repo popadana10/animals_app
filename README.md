@@ -10,7 +10,7 @@ React.js
 
 ## Setup and usage
 
-You can view the live page [here](https://zoo-app-dana-popa.netlify.app/about)
+You can view the live page [here](https://zoo-app-dana-popa.netlify.app/)
 
 ## Screenshot
 <img width="1440" alt="Screenshot 2024-06-02 at 23 48 35" src="https://github.com/popadana10/animals_app/assets/145273531/986e0d0a-e857-4380-b754-9decf6af1dad">
