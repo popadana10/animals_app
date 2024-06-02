@@ -17,9 +17,11 @@ You can view the live page [here](https://zoo-app-dana-popa.netlify.app/)
 
 ## Authors and acknowledgment
 
-Mentor: Margit Tennosaar
+Mentor [Margit Tennosaar](https://github.com/margittennosaar)
 Student: Dana Popa [LinkedIn](https://www.linkedin.com/in/dana-mihaela-popa/)
 
 ## Sources
 
 The site gets all images randomly from [Unsplash](https://unsplash.com/)
+The information about the creaturse is from [Wikipedia API] (https://www.mediawiki.org/wiki/API)
+Hosted with [Netlify](https://www.netlify.com/)
