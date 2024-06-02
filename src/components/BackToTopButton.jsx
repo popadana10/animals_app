@@ -9,9 +9,9 @@ function BackToTopButton(props) {
     }
 
     return (
-        <button onClick={handleClick}>
-            Go Back
-        </button>
+        <div className="backToTopButtonContainer">
+            <button className="backToTopButton" onClick={handleClick}>Go Back</button>
+        </div>
     );
 }
 

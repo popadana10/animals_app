@@ -414,7 +414,7 @@ h1 {
 }
 
 #SinglePage img {
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
   border-radius: 8px;
 }
@@ -436,4 +436,24 @@ h1 {
 
 #SinglePage .wiki p:last-child {
   margin-bottom: 0;
+}
+
+.backToTopButtonContainer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.backToTopButton {
+  width: 150px;
+  height: 40px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.backToTopButton:hover {
+  background-color: #555;
 }
