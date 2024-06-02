@@ -364,3 +364,32 @@ h1 {
 .likesRed {
   color: red;
 }
+
+#AboutPage {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+#AboutPage h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+#AboutPage p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+#AboutPage a {
+  color: #07f6ee;
+  text-decoration: none;
+}
+
+#AboutPage a:hover {
+  color: #00d1c1;
+  text-decoration: underline;
+}
