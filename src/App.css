@@ -99,29 +99,182 @@ body {
   background-color: rgba(0, 0, 0, 0.2); 
 }
 
+/* Existing styles remain unchanged */
+
+.searcharea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.searcharea input {
+  padding: 10px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  background-color: #fff;
+  color: #000;
+}
+
+.searcharea button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.searcharea button:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+h2 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.5rem;
+}
+
+
+/* General Styles */
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 body {
   margin: 0;
   padding: 0;
   min-width: 320px;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.seeMore {
-  color: #333;
+h2 {
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+/* Existing styles remain unchanged */
+
+.card {
+  background-color: rgb(250, 250, 250);
+  border: 1px solid #bacdd8;
+  border-radius: 8px;
+  color: rgb(40, 40, 40);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+  width: calc(20% - 20px); /* 5 cards per row */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative; /* Position for absolute elements */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.likesDisplay {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.likeButton {
+  background-color: #333;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.likeButton:hover {
+  background-color: #555;
+}
+
+.likesMiddle {
+  display: flex;
+  align-items: center;
+}
+
+.likesMiddle .material-symbols-outlined {
+  font-size: 1.5rem;
+  margin-right: 5px;
+}
+
+.likesRed {
+  color: red;
+}
+
+.closeButton {
+  background-color: rgba(0, 0, 0, 0.2);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 10px; /* Adjust position */
+  right: 10px; /* Adjust position */
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1; /* Ensure it's above other elements */
+  opacity: 0.8; /* Make it slightly transparent */
+}
+
+.closeButton:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.seeMoreLink {
+  color: black;
+  text-decoration: none;
+  margin-top: auto; /* Align to the bottom */
+  width: 100%; /* Take full width */
+  background-color: rgba(0, 0, 0, 0.1); /* Dark background */
+  padding: 10px; /* Add some padding */
+  display: block; /* Ensure it's block-level */
+  text-align: center; /* Center the text */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.seeMoreLink:hover {
+  background-color: rgba(0, 0, 0, 0.2); /* Darken on hover */
+}
+
+.card h2 {
+  text-transform: lowercase; /* Change text to lowercase */
 }
 
 a {

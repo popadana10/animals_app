@@ -5,7 +5,10 @@ const Card = ({ name, likes, addLikes, removeCard, removeLikes }) => {
 
     return (
         <div className="card">
-            <h2>{name}</h2>
+            <button onClick={removeCard} className="closeButton">
+                <span className="material-symbols-outlined">close</span>
+            </button>
+            <h2>{name.toLowerCase()}</h2>
             <img
                 src={`https://source.unsplash.com/400x400/?${name}`}
                 alt={`Photo of ${name}`}
@@ -26,10 +29,6 @@ const Card = ({ name, likes, addLikes, removeCard, removeLikes }) => {
                     <span className="material-symbols-outlined">heart_minus</span>
                 </button>
             </div>
-
-            <button onClick={removeCard} className="removeButton">
-                <span className="material-symbols-outlined">close</span>
-            </button>
 
             <Link to={name} className="seeMoreLink">See More</Link>
         </div>
