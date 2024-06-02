@@ -1,3 +1,104 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: #242424;
+  color: rgba(255, 255, 255, 0.87);
+  display: flex;
+  flex-direction: column;
+}
+
+.HomePage {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.images-container {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  margin: 0;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 50%;
+  height: 50vh; 
+  overflow: hidden;
+  margin: 0;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hplink {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 5rem; 
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.hplink::before,
+.hplink::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0;
+  background-color: rgb(7, 246, 238);
+  transition: width 0.3s ease;
+}
+
+.hplink::before {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hplink::after {
+  top: 0;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.hplink:hover::before,
+.hplink:hover::after {
+  width: 100%;
+  left: 0;
+  right: 0;
+  transform: translateX(0);
+}
+
+.hplink:hover {
+  background-color: rgba(0, 0, 0, 0.2); 
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

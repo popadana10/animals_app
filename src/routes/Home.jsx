@@ -9,15 +9,15 @@ const Home = () => {
     ];
 
     return (
-        <div id="HomePage">
-            <div className="row">
+        <div className="HomePage">
+            <div className="images-container">
                 {categories.map(category => (
-                    <div key={category.name}>
+                    <div key={category.name} className="image-wrapper">
                         <Link to={category.url} className="hplink">
                             {category.name}
                         </Link>
                         <img
-                            src={`https://source.unsplash.com/random/600x600/?${category.imgCategory}`}
+                            src={`https://source.unsplash.com/random/600x400/?${category.imgCategory}`}
                             alt={`Photo of a ${category.imgCategory}`}
                         />
                     </div>
@@ -28,4 +28,3 @@ const Home = () => {
 };
 
 export default Home;
-
